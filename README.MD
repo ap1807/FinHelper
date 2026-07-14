@@ -1,119 +1,155 @@
-# 💰 FinHelper
+# 💰 FinHelper – AI Powered Personal Finance Assistant
 
-An AI-powered personal finance assistant for Indian users built using **Streamlit**, **LangChain**, and **OpenAI GPT-4o Mini**.
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Framework-red)
+![LangChain](https://img.shields.io/badge/LangChain-Agentic_AI-green)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o_Mini-purple)
+![License](https://img.shields.io/badge/License-Educational-orange)
 
-FinHelper helps users calculate EMIs, estimate income tax, project savings, compare loan options, and answer finance-related questions using an AI-powered conversational interface.
+An **AI-powered personal finance assistant** for Indian users built using **Python**, **Streamlit**, **LangChain**, and **OpenAI GPT-4o Mini**.
 
----
-
-# Features
-
-✅ AI Chat Assistant
-
-✅ EMI Calculator
-
-✅ Savings Calculator (FD + SIP)
-
-✅ Income Tax Estimator (India FY 2024-25)
-
-✅ Loan Comparison Tool
-
-✅ Interactive Chat Interface
-
-✅ Tool Calling with LangChain
-
-✅ AI-powered Financial Guidance
+FinHelper helps users calculate **Loan EMIs**, estimate **Indian Income Tax**, project **FD & SIP savings**, compare loan options, and answer finance-related questions through an intelligent conversational AI interface. The application uses **LangChain Tool Calling Agents** to route financial queries to specialized Python tools, ensuring accurate and reliable calculations.
 
 ---
 
-# Tech Stack
+# 🚀 Features
 
-### Programming Language
+- 🤖 AI Chat Assistant
+- 📐 EMI Calculator
+- 💰 Savings Calculator (FD + SIP)
+- 📋 Income Tax Estimator (India FY 2024-25)
+- ⚖️ Loan Comparison Tool
+- 💬 Interactive Chat Interface
+- 🧠 LangChain Tool Calling Agent
+- 📊 Loan Comparison Dashboard
+- 🔐 Secure API Key Management
+- 🇮🇳 Indian Currency Formatting
+
+---
+
+# 🛠 Tech Stack
+
+## Programming Language
 
 - Python 3
 
-### Frontend
+## Frontend
 
 - Streamlit
 
-### AI Framework
+## AI Framework
 
 - LangChain
 
-### LLM
+## Large Language Model
 
 - OpenAI GPT-4o Mini
 
-### Libraries
+## Libraries
 
 - Streamlit
 - LangChain
 - LangChain OpenAI
+- LangChain Core
 - Pandas
 - NumPy
 - Python Dotenv
 
-### Environment
+## Environment
 
 - OpenAI API
-- Environment Variables
+- Environment Variables (.env)
 
 ---
 
-# Project Structure
+# 📂 Project Structure
 
-```
+```text
 FinHelper/
 │
-├── app.py
-├── agent.py
-├── tools.py
-├── requirements.txt
-├── README.md
-├── .env
-└── .venv/
+├── 📄 app.py
+├── 📄 agent.py
+├── 📄 tools.py
+├── 📄 requirements.txt
+├── 📄 README.md
+├── 📂 screenshots/
+├── 📄 .gitignore
+└── 📄 .env (Not uploaded to GitHub)
 ```
 
 ---
 
-# Architecture
+# 🏗 Architecture
 
-```
+```text
                 User
                   │
                   ▼
-          Streamlit Frontend
+         Streamlit Frontend
                   │
                   ▼
       LangChain Tool Calling Agent
                   │
-         GPT-4o Mini (OpenAI)
+          OpenAI GPT-4o Mini
                   │
         Select Appropriate Tool
                   │
-      ┌───────────┼────────────┐
-      ▼           ▼            ▼
- EMI Calculator  Savings    Tax Estimator
-                 Calculator
-                      │
-                      ▼
-             Loan Comparator
-                      │
-                      ▼
-              AI Response
-                      │
-                      ▼
-                 Streamlit UI
+      ┌───────────┼──────────────┬──────────────┐
+      ▼           ▼              ▼              ▼
+ EMI Calculator  Savings Tool  Tax Tool  Loan Comparator
+                  │
+                  ▼
+         Financial Calculation
+                  │
+                  ▼
+        AI Generated Response
+                  │
+                  ▼
+           Streamlit Interface
 ```
 
 ---
 
-# Installation
+# 📸 Screenshots
 
-## Clone Repository
+## 🤖 AI Assistant & Available Tools
+
+<p align="center">
+  <img src="screenshots/Screenshot (4).png" width="900">
+</p>
+
+---
+
+## ⚖️ Loan Comparator
+
+<p align="center">
+  <img src="screenshots/Screenshot (5).png" width="900">
+</p>
+
+---
+
+## 📊 Loan Comparison Results
+
+<p align="center">
+  <img src="screenshots/Screenshot (6).png" width="900">
+</p>
+
+---
+
+## 📈 Loan Comparison Chart
+
+<p align="center">
+  <img src="screenshots/Screenshot (7).png" width="900">
+</p>
+
+---
+
+# ⚙️ Installation
+
+## 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ap1807/FinHelper.git
 ```
 
 ```bash
@@ -122,7 +158,7 @@ cd FinHelper
 
 ---
 
-## Create Virtual Environment
+## 2. Create a Virtual Environment
 
 ### Windows
 
@@ -130,7 +166,7 @@ cd FinHelper
 python -m venv .venv
 ```
 
-Activate
+Activate it
 
 ```bash
 .venv\Scripts\activate
@@ -138,7 +174,7 @@ Activate
 
 ---
 
-## Install Dependencies
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -146,9 +182,9 @@ pip install -r requirements.txt
 
 ---
 
-# Configure Environment Variables
+## 4. Configure Environment Variables
 
-Create a `.env` file.
+Create a `.env` file in the project root.
 
 ```env
 LLM_API_KEY=your_openai_api_key
@@ -157,128 +193,141 @@ LLM_MODEL=gpt-4o-mini
 
 ---
 
-# Run Application
+## 5. Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your browser.
+The application will automatically open in your browser.
 
 ---
 
-# Available Tools
+# 🧰 Available Tools
 
-## EMI Calculator
+## 📐 EMI Calculator
 
-Calculates
+Calculates:
+
+- Monthly EMI
+- Total Interest
+- Total Payment
+- Interest Ratio
+
+---
+
+## 💰 Savings Calculator
+
+Supports:
+
+- Fixed Deposit (FD)
+- Monthly SIP
+
+Returns:
+
+- Maturity Amount
+- Interest Earned
+- SIP Corpus
+- Total Corpus
+
+---
+
+## 📋 Income Tax Estimator
+
+Supports:
+
+- New Tax Regime
+- Old Tax Regime
+
+Returns:
+
+- Taxable Income
+- Basic Tax
+- Health & Education Cess
+- Total Tax
+- Effective Tax Rate
+- Monthly Tax Outflow
+
+---
+
+## ⚖️ Loan Comparison Tool
+
+Compares:
 
 - Monthly EMI
 - Total Interest
 - Total Payment
 
----
-
-## Savings Calculator
-
-Supports
-
-- Fixed Deposit
-- SIP
-
-Returns
-
-- Maturity Amount
-- Interest Earned
-- Total Corpus
+Recommends the better loan option based on total repayment.
 
 ---
 
-## Income Tax Estimator
+# 🤖 AI Capabilities
 
-Supports
-
-- New Tax Regime
-- Old Tax Regime
-
-Returns
-
-- Taxable Income
-- Total Tax
-- Effective Tax Rate
+- LangChain Tool Calling Agent
+- OpenAI GPT-4o Mini Integration
+- Prompt Engineering
+- Conversation Memory
+- Chat History
+- Automatic Tool Selection
+- Financial Tool Routing
+- Deterministic Financial Calculations
 
 ---
 
-## Loan Comparison
+# 💡 Skills Demonstrated
 
-Compares
-
-- Monthly EMI
-- Interest
-- Total Payment
-
-Recommends the better loan option.
-
----
-
-# AI Features
-
+- Python Programming
+- Streamlit Development
+- LangChain Agents
+- OpenAI API Integration
+- Prompt Engineering
 - Tool Calling
 - Function Calling
-- Chat History
-- Conversation Memory
-- Prompt Engineering
-- Financial Tool Routing
+- Agentic AI
+- Financial Calculations
+- Environment Variable Management
+- Interactive Dashboard Development
 
 ---
 
-# Screenshots
-
-Add screenshots here.
-
-Example:
-
-```
-screenshots/
-    home.png
-    chat.png
-    comparison.png
-```
-
----
-
-# Future Improvements
+# 🔮 Future Improvements
 
 - User Authentication
 - Database Integration
+- Expense Tracker
 - Portfolio Tracker
 - Mutual Fund Analysis
-- Stock Market APIs
-- Expense Tracker
+- Stock Market API Integration
 - PDF Report Generation
 - Voice Assistant
 - Dark Mode
+- Multi-language Support
 
 ---
 
-# Disclaimer
+# 📜 Disclaimer
 
-This project is developed for educational and informational purposes only.
+This project is developed for **educational and informational purposes only**.
 
-It does **not** provide financial advice.
+It does **not** provide financial, investment, or legal advice.
 
-Always consult a SEBI-registered financial advisor before making investment or financial decisions.
+Users should consult a **SEBI-registered financial advisor** before making investment or financial decisions.
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 **Adityaraj Patil**
 
-B.Tech CSE (AI & ML)
-
+B.Tech – Computer Science & Engineering (AI & ML)  
 Lovely Professional University
 
-GitHub: *Add your GitHub Profile*
+- GitHub: https://github.com/ap1807
+- LinkedIn: *Add your LinkedIn profile here*
 
-LinkedIn: *Add your LinkedIn Profile*
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub. It helps others discover the project and motivates future improvements.

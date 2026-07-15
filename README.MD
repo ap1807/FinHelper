@@ -324,7 +324,6 @@ B.Tech – Computer Science & Engineering (AI & ML)
 Lovely Professional University
 
 - GitHub: https://github.com/ap1807
-- LinkedIn: *Add your LinkedIn profile here*
 
 ---
 

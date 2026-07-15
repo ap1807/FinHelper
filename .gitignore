@@ -1,20 +1,87 @@
-# Environment variables
+# ==========================================================
+# FinHelper - .gitignore
+# ==========================================================
+
+# -------------------------
+# Environment Variables
+# -------------------------
 .env
 
-# Virtual environments
+# -------------------------
+# Python Virtual Environments
+# -------------------------
 .venv/
 venv/
+env/
+ENV/
 
-# Python cache
+# -------------------------
+# Python Cache
+# -------------------------
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Streamlit cache
+# -------------------------
+# Streamlit
+# -------------------------
 .streamlit/
 
-# VS Code settings
+# -------------------------
+# VS Code
+# -------------------------
 .vscode/
 
-# OS files
+# -------------------------
+# PyCharm
+# -------------------------
+.idea/
+
+# -------------------------
+# Jupyter Notebook
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Distribution / Packaging
+# -------------------------
+build/
+dist/
+*.egg-info/
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
+# Operating System Files
+# -------------------------
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# -------------------------
+# Temporary Files
+# -------------------------
+*.tmp
+*.temp
+
+# -------------------------
+# Python Testing
+# -------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# -------------------------
+# Local Database
+# -------------------------
+*.db
+*.sqlite3
+
+# -------------------------
+# Miscellaneous
+# -------------------------
+*.bak
+*.swp
